@@ -33,6 +33,8 @@
   --progress-outer-border: rgba(177, 156, 217, 0.22);
   /* Sets colour for the border of the progress bar */
   --progress-inner: rgba(177, 156, 217, 0.75);
+  /* Sets the colour of the border around the cast and crew images */
+  --cast-border: #caa1e8;
   /* Sets colour for the background of the progress bar with progress */
   --default-card-bg1: #9d92db;
   /* Sets the colour of the default card background */
@@ -627,30 +629,27 @@ html {
 /********************************************************************************************************
       general layout
 ********************************************************************************************/
-/* cast & crew circular */
-/*#castContent .cardImageContainer.coveredImage.cardContent.itemAction.lazy.non-blurhashable.lazy-image-fadein-fast,
-#castContent .cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground1.cardContent.itemAction {
+/* circular cast and guest cast */
+.personCard .cardScalable {
+  display: flex !important;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
+  overflow: hidden;
+  border-style: groove;
+  border-color: var(--cast-border);
+  border-width: thick;
+}
+.personCard .cardContent.cardImageContainer {
+  background-position-y: top;
+}
+.personCard .cardOverlayButton-br {
+  display: none !important;
+}
+#castContent, #guestCastContent {
+  gap: 1em;
 }
 
-#castContent .cardPadder.cardPadder-overflowPortrait.lazy-hidden-children,
-#castContent .cardPadder-mixedPortrait,
-#castContent .cardPadder-overflowPortrait,
-#castContent .cardPadder-portrait,
-#castContent .overflowPortraitCard-textCardPadder {
-  border-radius: 50%;
-  padding-bottom: 100%;
-}
-
-#castContent .cardOverlayButton-br {
-  bottom: 0;
-  position: absolute;
-  left: 38%;
-}
-
-#castContent .cardOverlayContainer {
-  border-radius: 50%;
-}*/
 
 div#videoOsdPage {
   overflow: hidden !important;
@@ -1546,64 +1545,64 @@ div[data-role="controlgroup"] a[data-role="button"] + a[data-role="button"] {
 
 @media all and (min-width: 131.25em) {
   #castContent .cardScalable {
-    width: calc(6.3vw - 0.6em) !important;
-    height: calc(6.3vw - 0.6em) !important;
+    width: calc(6.3vw - 1em) !important;
+    height: calc(6.3vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 120em) and (max-width: 131.25em) {
   #castContent .cardScalable {
-    width: calc(6.4vw - 0.6em) !important;
-    height: calc(6.4vw - 0.6em) !important;
+    width: calc(6.4vw - 1em) !important;
+    height: calc(6.4vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 100em) and (max-width: 120em) {
   #castContent .cardScalable {
-    width: calc(7.6vw - 0.6em) !important;
-    height: calc(7.6vw - 0.6em) !important;
+    width: calc(7.6vw - 1em) !important;
+    height: calc(7.6vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 87.5em) and (max-width: 100em) {
   #castContent .cardScalable {
-    width: calc(9.3vw - 0.6em) !important;
-    height: calc(9.3vw - 0.6em) !important;
+    width: calc(9.3vw - 1em) !important;
+    height: calc(9.3vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 75em) and (max-width: 87.5em) {
   #castContent .cardScalable {
-    width: calc(10.5vw - 0.6em) !important;
-    height: calc(10.5vw - 0.6em) !important;
+    width: calc(10.5vw - 1em) !important;
+    height: calc(10.5vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 50em) and (max-width: 75em) {
   #castContent .cardScalable {
-    width: calc(15vw - 0.6em) !important;
-    height: calc(15vw - 0.6em) !important;
+    width: calc(15vw - 1em) !important;
+    height: calc(15vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 43.75em) and (max-width: 50em) {
   #castContent .cardScalable {
-    width: calc(20.1vw - 0.6em) !important;
-    height: calc(20.1vw - 0.6em) !important;
+    width: calc(20.1vw - 1em) !important;
+    height: calc(20.1vw - 1em) !important;
   }
 }
 
 @media all and (min-width: 25em) and (max-width: 43.75em) {
   #castContent .cardScalable {
-    width: calc(31.2vw - 0.6em) !important;
-    height: calc(31.2vw - 0.6em) !important;
+    width: calc(31.2vw - 1em) !important;
+    height: calc(31.2vw - 1em) !important;
   }
 }
 
 @media all and (max-width: 25em) {
   #castContent .cardScalable {
-    width: calc(40vw - 0.6em) !important;
-    height: calc(40vw - 0.6em) !important;
+    width: calc(40vw - 1em) !important;
+    height: calc(40vw - 1em) !important;
   }
 }
 
